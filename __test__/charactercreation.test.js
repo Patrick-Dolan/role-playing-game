@@ -9,21 +9,24 @@ describe("Character", () => {
     test("should generate intelligence stat", () => {
       let character = new Character("John Smith");
       character.generateStats()
-      expect(character.int).toBeGreaterThanOrEqual(1);
-      expect(character.int).toBeLessThan(7);
+      expect(character.stats.int).toBeGreaterThanOrEqual(1);
+      expect(character.stats.int).toBeLessThan(7);
     });
     test("should generate strength stat", () => {
       let character = new Character("John Smith");
       character.generateStats()
-      expect(character.str).toBeGreaterThanOrEqual(1);
-      expect(character.str).toBeLessThan(7);
+      expect(character.stats.str).toBeGreaterThanOrEqual(1);
+      expect(character.stats.str).toBeLessThan(7);
     });
     test("should generate agility stat", () => {
       let character = new Character("John Smith");
       character.generateStats()
-      expect(character.agi).toBeGreaterThanOrEqual(1);
-      expect(character.agi).toBeLessThan(7);
+      expect(character.stats.agi).toBeGreaterThanOrEqual(1);
+      expect(character.stats.agi).toBeLessThan(7);
     });
+  });
+  describe("chooseClass", () => {
+    test("should take in ")
   });
 });
 describe("rollD6", () => {
