@@ -12,6 +12,12 @@ describe("Character", () => {
       expect(character.int).toBeGreaterThanOrEqual(1);
       expect(character.int).toBeLessThan(7);
     });
+    test("should generate strength stat", () => {
+      let character = new Character("John Smith");
+      character.generateStats()
+      expect(character.str).toBeGreaterThanOrEqual(1);
+      expect(character.str).toBeLessThan(7);
+    });
   });
 });
 describe("rollD6", () => {
