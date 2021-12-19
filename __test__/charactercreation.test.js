@@ -8,6 +8,8 @@ describe("Character", () => {
   test("should correctly create a character object", () => {
     expect(character.name).toBe("John Smith");
   });
+
+  // Tests to generate stats
   describe("generateStats", () => {
     test("should generate intelligence stat", () => {
       character.generateStats()
@@ -25,6 +27,8 @@ describe("Character", () => {
       expect(character.stats.agi).toBeLessThan(7);
     });
   });
+
+  // Tests to choose character class
   describe("chooseClass", () => {
     test("should take in a choice argument and add a class to the character", () => {
       let choice = "Wizard";
@@ -41,6 +45,8 @@ describe("Character", () => {
       character.chooseClass(choice);
       expect(character.class).toEqual("Rogue");
     });
+
+    // Tests to update character.stats based on character class chosen
     test("should take in Wizard as class and add +2 to this.stats.int", () => {
       let choice = "Wizard";
       character.generateStats();
@@ -62,15 +68,33 @@ describe("Character", () => {
       character.chooseClass(choice);
       expect(character.stats.agi).toEqual(previousStat + 2);
     });
-    test("should take in Wizard as class and subtract -1 to this.stats.vit", () => {
+
+    // Tests to update character.stats.int based on character class chosen
+    test("should take in Wizard as class and subtract 1 to this.stats.vit", () => {
       let choice = "Wizard";
       character.generateStats();
       let previousStat = character.stats.vit;
       character.chooseClass(choice);
       expect(character.stats.vit).toEqual(previousStat - 1);
     });
+    test("should take in Fighter as class and add 2 to this.stats.vit", () => {
+      let choice = "Fighter";
+      character.generateStats();
+      let previousStat = character.stats.vit;
+      character.chooseClass(choice);
+      expect(character.stats.vit).toEqual(previousStat + 2);
+    });
+    test("should take in Rogue as class and add 1 to this.stats.vit", () => {
+      let choice = "Rogue";
+      character.generateStats();
+      let previousStat = character.stats.vit;
+      character.chooseClass(choice);
+      expect(character.stats.vit).toEqual(previousStat + 1);
+    });
   });
 });
+
+// Tests for dice roll function
 describe("rollD6", () => {
   test("should return a number between 1 and 6", () => {
     const randomNumber = rollD6();
