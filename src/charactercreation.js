@@ -8,7 +8,7 @@ export class Character {
       vit: 0
     };
     this.class = '';
-    // this.health = 0;
+    this.health = 0;
   }
   generateStats() {
     this.stats.int = rollD6();
