@@ -6,11 +6,15 @@ export class Character {
       str: 0,
       agi: 0
     };
+    this.class = '';
   }
   generateStats() {
     this.stats.int = rollD6();
     this.stats.str = rollD6();
     this.stats.agi = rollD6();
+  }
+  chooseClass(choice) {
+    this.class = choice;
   }
 }
 export function rollD6() {
