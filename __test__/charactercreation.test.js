@@ -12,7 +12,7 @@ describe("Character", () => {
     expect(character.level).toBe(1);
   });
   test("should correctly create an empty inventory object inside character constructor", () => {
-    expect(character.inventory).toBe({});
+    expect(character.inventory).hasOwnProperty(Object.entries(character.inventory).length === 0);
   });
 
   // Tests to generate stats
