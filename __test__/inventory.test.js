@@ -7,28 +7,38 @@ describe("Inventory", () => {
     inventory = new Inventory();
   });
 
-  // Test to initialize empty inventory.items array
+  // Test to initialize empty inventory.itemss array
   test("should initialize an inventory object", () => {
     expect(inventory.items).toEqual([]);
   });
   
-  // Test to add items to inventory
-  describe("addItems", () => {
-    test("should add items to inventory.items", () => {
+  // Test to add item to inventory
+  describe("addItem", () => {
+    test("should add item to inventory.items", () => {
       const item = "sword";
-      inventory.addItems(item);
+      inventory.addItem(item);
       expect(inventory.items).toContain(item);
     });
   });
 
-  // Test to remove items from inventory
-  describe("removeItems", () => {
-    test("should remove items from inventory.items", () => {
+  // Test to remove item from inventory
+  describe("removeItem", () => {
+    test("should remove one item from inventory.items", () => {
       const armor = 'armor';
-      inventory.addItems(armor);
+      inventory.addItem(armor);
       expect(inventory.items).toEqual([armor]);
-      inventory.removeItems(armor);
+      inventory.removeItem(armor);
       expect(inventory.items).toEqual([]);
+    });
+
+    test("should remove a specific item from inventory.items", () => {
+      const potion = "potion";
+      const spellbook = "spellbook";
+      inventory.addItem(potion);
+      inventory.addItem(spellbook);
+      expect(inventory.items).toEqual([potion, spellbook]);
+      inventory.removeItem(spellbook);
+      expect(inventory.items).toEqual([potion]);
     });
   });
 
