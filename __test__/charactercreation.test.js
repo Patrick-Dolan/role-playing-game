@@ -18,6 +18,12 @@ describe("Character", () => {
       expect(character.str).toBeGreaterThanOrEqual(1);
       expect(character.str).toBeLessThan(7);
     });
+    test("should generate agility stat", () => {
+      let character = new Character("John Smith");
+      character.generateStats()
+      expect(character.agi).toBeGreaterThanOrEqual(1);
+      expect(character.agi).toBeLessThan(7);
+    });
   });
 });
 describe("rollD6", () => {
