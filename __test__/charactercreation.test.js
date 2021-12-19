@@ -5,6 +5,14 @@ describe("Character", () => {
     let character = new Character("John Smith")
     expect(character.name).toBe("John Smith");
   });
+  describe("generateStats", () => {
+    test("should generate intelligence stat", () => {
+      let character = new Character("John Smith");
+      character.generateStats()
+      expect(character.int).toBeGreaterThanOrEqual(1);
+      expect(character.int).toBeLessThan(7);
+    });
+  });
 });
 describe("rollD6", () => {
   test("should return a number between 1 and 6", () => {
