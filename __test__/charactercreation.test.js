@@ -9,7 +9,7 @@ describe("Character", () => {
 describe("rollD6", () => {
   test("should return a number between 1 and 6", () => {
     const randomNumber = rollD6();
-    expect(randomNumber).toBeGreaterThanOrEqualTo(1);
+    expect(randomNumber).toBeGreaterThanOrEqual(1);
     expect(randomNumber).toBeLessThan(7);
   });
 });
