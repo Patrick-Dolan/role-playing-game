@@ -31,6 +31,16 @@ describe("Character", () => {
       character.chooseClass(choice);
       expect(character.class).toEqual("Wizard");
     });
+    test("should take in a choice argument and add a class to the character", () => {
+      let choice = "Fighter";
+      character.chooseClass(choice);
+      expect(character.class).toEqual("Fighter");
+    });
+    test("should take in a choice argument and add a class to the character", () => {
+      let choice = "Rogue";
+      character.chooseClass(choice);
+      expect(character.class).toEqual("Rogue");
+    });
   });
 });
 describe("rollD6", () => {
