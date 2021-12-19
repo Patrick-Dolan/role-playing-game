@@ -11,6 +11,9 @@ describe("Character", () => {
   test("should correctly assign level 1", () => {
     expect(character.level).toBe(1);
   });
+  test("should correctly create an empty inventory object inside character constructor", () => {
+    expect(character.inventory).toBe({});
+  });
 
   // Tests to generate stats
   describe("generateStats", () => {
