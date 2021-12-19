@@ -4,7 +4,8 @@ export class Character {
     this.stats = {
       int: 0,
       str: 0,
-      agi: 0
+      agi: 0,
+      vit: 6
     };
     this.class = '';
   }
