@@ -61,7 +61,14 @@ describe("Character", () => {
       let previousStat = character.stats.agi;
       character.chooseClass(choice);
       expect(character.stats.agi).toEqual(previousStat + 2);
-    }); 
+    });
+    test("should take in Wizard as class and subtract -1 to this.stats.vit", () => {
+      let choice = "Wizard";
+      character.generateStats();
+      let previousStat = character.stats.vit;
+      character.chooseClass(choice);
+      expect(character.stats.vit).toEqual(previousStat - 1);
+    });
   });
 });
 describe("rollD6", () => {
