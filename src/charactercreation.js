@@ -1,14 +1,16 @@
 export class Character {
   constructor(name) {
     this.name = name;
-    this.int = 0;
-    this.str = 0;
-    this.agi = 0;
+    this.stats = {
+      int: 0,
+      str: 0,
+      agi: 0
+    };
   }
   generateStats() {
-    this.int = rollD6();
-    this.str = rollD6();
-    this.agi = rollD6();
+    this.stats.int = rollD6();
+    this.stats.str = rollD6();
+    this.stats.agi = rollD6();
   }
 }
 export function rollD6() {
