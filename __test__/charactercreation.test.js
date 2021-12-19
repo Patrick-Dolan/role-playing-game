@@ -41,6 +41,27 @@ describe("Character", () => {
       character.chooseClass(choice);
       expect(character.class).toEqual("Rogue");
     });
+    test("should take in Wizard as class and add +2 to this.stats.int", () => {
+      let choice = "Wizard";
+      character.generateStats();
+      let previousStat = character.stats.int;
+      character.chooseClass(choice);
+      expect(character.stats.int).toEqual(previousStat + 2);
+    });
+    test("should take in Fighter as class and add +2 to this.stats.str", () => {
+      let choice = "Fighter";
+      character.generateStats();
+      let previousStat = character.stats.str;
+      character.chooseClass(choice);
+      expect(character.stats.str).toEqual(previousStat + 2);
+    }); 
+    test("should take in Rogue as class and add +2 to this.stats.str", () => {
+      let choice = "Rogue";
+      character.generateStats();
+      let previousStat = character.stats.agi;
+      character.chooseClass(choice);
+      expect(character.stats.agi).toEqual(previousStat + 2);
+    }); 
   });
 });
 describe("rollD6", () => {
