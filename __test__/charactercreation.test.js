@@ -1,4 +1,4 @@
-import { Character, rollD6 } from "../src/charactercreation.js";
+import { Character, rollD6 } from "../src/js/charactercreation.js";
 
 describe("Character", () => {
   let character;
