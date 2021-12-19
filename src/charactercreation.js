@@ -1,6 +1,11 @@
 export class Character {
   constructor(name) {
     this.name = name;
+    this.int = 0;
+  }
+  generateStats() {
+    this.int = rollD6();
+    this.str = rollD6();
   }
 }
 export function rollD6() {
