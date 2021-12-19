@@ -6,6 +6,7 @@ export class Character {
   generateStats() {
     this.int = rollD6();
     this.str = rollD6();
+    this.agi = rollD6();
   }
 }
 export function rollD6() {
