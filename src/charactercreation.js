@@ -23,9 +23,11 @@ export class Character {
         break;
       case 'Fighter':
         this.stats.str += 2;
+        this.stats.vit += 2;
         break;
       case 'Rogue':
         this.stats.agi += 2;
+        this.stats.vit += 1;
         break;
     }
   }
