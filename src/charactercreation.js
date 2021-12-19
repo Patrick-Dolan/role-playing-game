@@ -19,6 +19,7 @@ export class Character {
     switch (choice) {
       case 'Wizard':
         this.stats.int += 2;
+        this.stats.vit -= 1;
         break;
       case 'Fighter':
         this.stats.str += 2;
