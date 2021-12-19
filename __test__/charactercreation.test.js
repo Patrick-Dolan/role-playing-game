@@ -8,6 +8,9 @@ describe("Character", () => {
   test("should correctly create a character object", () => {
     expect(character.name).toBe("John Smith");
   });
+  test("should correctly assign level 1", () => {
+    expect(character.level).toBe(1);
+  });
 
   // Tests to generate stats
   describe("generateStats", () => {
