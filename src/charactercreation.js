@@ -3,3 +3,6 @@ export class Character {
     this.name = name;
   }
 }
+export function rollD6() {
+  return Math.floor((Math.random() * 6) + 1);
+}
