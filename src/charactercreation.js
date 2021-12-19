@@ -20,23 +20,23 @@ export class Character {
   chooseClass(choice) {
     this.class = choice;
     switch (choice) {
-      case 'Wizard':
-        this.stats.int += 2;
-        this.stats.vit -= 1;
-        break;
-      case 'Fighter':
-        this.stats.str += 2;
-        this.stats.vit += 2;
-        break;
-      case 'Rogue':
-        this.stats.agi += 2;
-        this.stats.vit += 1;
-        break;
+    case 'Wizard':
+      this.stats.int += 2;
+      this.stats.vit -= 1;
+      break;
+    case 'Fighter':
+      this.stats.str += 2;
+      this.stats.vit += 2;
+      break;
+    case 'Rogue':
+      this.stats.agi += 2;
+      this.stats.vit += 1;
+      break;
     }
   }
   setHealth() {
     this.health = this.stats.vit;
-  };
+  }
 }
 export function rollD6() {
   return Math.floor((Math.random() * 6) + 1);
