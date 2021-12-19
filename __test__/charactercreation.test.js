@@ -92,6 +92,15 @@ describe("Character", () => {
       expect(character.stats.vit).toEqual(previousStat + 1);
     });
   });
+  
+  describe("setHealth", () => {
+    test("should set Wizard health to this.stats.vit score", () => {
+      character.generateStats();
+      character.chooseClass("Wizard");      
+      character.setHealth();
+      expect(character.health).toEqual(character.stats.vit);
+    });
+  });
 });
 
 // Tests for dice roll function
