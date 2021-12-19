@@ -15,6 +15,7 @@ describe("Inventory", () => {
   describe("addItems", () => {
     test("should add items to inventory.items", () => {
       const item = "sword";
+      inventory.addItems(item);
       expect(inventory.items).toContain(item);
     });
 
