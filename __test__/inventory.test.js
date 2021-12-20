@@ -7,7 +7,7 @@ describe("Inventory", () => {
     inventory = new Inventory();
   });
 
-  // Test to initialize empty inventory.itemss array
+  // Test to initialize empty inventory.items array
   test("should initialize an inventory object", () => {
     expect(inventory.items).toEqual([]);
   });
@@ -39,6 +39,23 @@ describe("Inventory", () => {
       expect(inventory.items).toEqual([potion, spellbook]);
       inventory.removeItem(spellbook);
       expect(inventory.items).toEqual([potion]);
+    });
+  });
+
+  ///Test to check for too many items in inventory
+  describe("tooManyItems", () => {
+    test("should return true if inventory.items has 5 items in it", () => {
+      const item1 = "Item1";
+      const item2 = "Item2";
+      const item3 = "Item3";
+      const item4 = "Item4";
+      const item5 = "Item5";
+      inventory.addItem(item1);
+      inventory.addItem(item2);
+      inventory.addItem(item3);
+      inventory.addItem(item4);
+      inventory.addItem(item5);
+      expect(inventory.tooManyItems()).toEqual(true);
     });
   });
 
