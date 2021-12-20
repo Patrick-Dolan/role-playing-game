@@ -9,6 +9,6 @@ export class Inventory {
     this.items.splice(this.items.indexOf(item), 1);
   }
   tooManyItems() {
-    return this.items.length <= 5;
+    return this.items.length >= 5;
   }
 };
