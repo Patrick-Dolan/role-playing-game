@@ -55,7 +55,12 @@ describe("Inventory", () => {
       inventory.addItem(item3);
       inventory.addItem(item4);
       inventory.addItem(item5);
-      expect(inventory.tooManyItems()).toEqual(true);
+      expect(inventory.tooManyItems()).toBeTruthy();
+    });
+    test("should return false if inventory.items has less than 5 items in it", () => {
+      const item = "Item1";
+      inventory.addItem(item);
+      expect(inventory.tooManyItems()).toBeFalsy();
     });
   });
 
