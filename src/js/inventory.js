@@ -1,7 +1,11 @@
 export class Inventory {
   constructor() {
     this.items = [];
+    // this.armor = {};
+    // this.weapon = {};
+    // this.trinket = {};
   }
+  //TODO Create constuctor object for equip slots
   addItem(item) {
     this.items.push(item);
   }
