@@ -6,6 +6,7 @@ export class Inventory {
     // this.trinket = {};
   }
   //TODO Create constuctor object for equip slots
+  //TODO add tooManyItems conditional to addItem function
   addItem(item) {
     this.items.push(item);
   }
