@@ -80,6 +80,19 @@ describe("Inventory", () => {
     });
   });
 
+  // Tests to equip armor, weapon, or trinket
+  describe("equipItem" , () => {
+    test("should equip character with armor", () => {
+      const armor = {
+        equippable: "armor",
+        name: "Magic Armor",
+      };
+      inventory.equipItem(armor);
+      expect(inventory.armor.name).toMatch("Magic Armor");
+    });
+    
+  });
+
 
 
 });

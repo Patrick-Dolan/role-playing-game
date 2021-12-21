@@ -15,4 +15,7 @@ export class Inventory {
   tooManyItems() {
     return this.items.length >= 5;
   }
+  equipArmor() {
+    
+  }
 };
