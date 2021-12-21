@@ -11,6 +11,15 @@ describe("Inventory", () => {
   test("should initialize an inventory object", () => {
     expect(inventory.items).toEqual([]);
   });
+  test("should declare inventory.armor empty object", () => {
+    expect(inventory.armor).toEqual({});
+  });
+  test("should declare inventory.armor empty object", () => {
+    expect(inventory.weapon).toEqual({});
+  });
+  test("should declare inventory.armor empty object", () => {
+    expect(inventory.trinket).toEqual({});
+  });
   
   // Test to add item to inventory
   describe("addItem", () => {
@@ -70,5 +79,7 @@ describe("Inventory", () => {
       expect(inventory.tooManyItems()).toBeFalsy();
     });
   });
+
+
 
 });
