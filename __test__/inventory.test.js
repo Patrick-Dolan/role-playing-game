@@ -19,6 +19,13 @@ describe("Inventory", () => {
       inventory.addItem(item);
       expect(inventory.items).toContain(item);
     });
+    test("should not add inventory since it has 5+ items inside", () => {
+      const item = "item";
+      for (let i = 0; i <= 4; i++) {
+        inventory.addItem(item);
+      }
+      expect(inventory.addItem(item)).toMatch("Inventory Full");
+    });
   });
 
   // Test to remove item from inventory
@@ -42,7 +49,7 @@ describe("Inventory", () => {
     });
   });
 
-  ///Test to check for too many items in inventory
+  // Test to check for too many items in inventory
   describe("tooManyItems", () => {
     test("should return true if inventory.items has 5 items in it", () => {
       const item1 = "Item1";
