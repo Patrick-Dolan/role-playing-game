@@ -90,6 +90,14 @@ describe("Inventory", () => {
       inventory.equipItem(armor);
       expect(inventory.armor.item.name).toMatch("Magic Armor");
     });
+    test("should equip character with weapon", () => {
+      const weapon = {
+        equippable: "weapon",
+        name: "Magic Sword",
+      };
+      inventory.equipItem(weapon);
+      expect(inventory.weapon.item.name).toMatch("Magic Sword");
+    });
     
   });
 
