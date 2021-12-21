@@ -8,7 +8,7 @@ export class Inventory {
   //TODO Create constuctor object for equip slots
   //TODO add tooManyItems conditional to addItem function
   addItem(item) {
-    this.items.push(item);
+    return (this.tooManyItems()) ? "Inventory Full" : this.items.push(item);
   }
   removeItem(item) {
     this.items.splice(this.items.indexOf(item), 1);
