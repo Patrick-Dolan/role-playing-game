@@ -20,6 +20,8 @@ export class Inventory {
       this.armor.item = item;
     } else if (item.equippable === "weapon") {
       this.weapon.item = item;
+    } else if (item.equippable === "trinket") {
+      this.trinket.item = item;
     }
   }
 };
