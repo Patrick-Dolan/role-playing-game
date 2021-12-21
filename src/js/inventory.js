@@ -15,7 +15,9 @@ export class Inventory {
   tooManyItems() {
     return this.items.length >= 5;
   }
-  equipArmor() {
-    
+  equipItem(item) {
+    if (item.equippable === "armor") {
+      this.armor.item = item;
+    }
   }
 };
