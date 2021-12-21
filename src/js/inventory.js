@@ -1,12 +1,11 @@
 export class Inventory {
   constructor() {
     this.items = [];
-    // this.armor = {};
-    // this.weapon = {};
-    // this.trinket = {};
+    this.armor = {};
+    this.weapon = {};
+    this.trinket = {};
   }
   //TODO Create constuctor object for equip slots
-  //TODO add tooManyItems conditional to addItem function
   addItem(item) {
     return (this.tooManyItems()) ? "Inventory Full" : this.items.push(item);
   }
