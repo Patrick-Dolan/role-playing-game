@@ -17,21 +17,24 @@ export class Character {
     this.stats.str = rollD6();
     this.stats.agi = rollD6();
     this.stats.vit = 6;
-  }
+  }//TODO Add tests to add setHealth to chooseClass method
   chooseClass(choice) {
     this.class = choice;
     switch (choice) {
     case 'Wizard':
       this.stats.int += 2;
       this.stats.vit -= 1;
+      this.setHealth();
       break;
     case 'Fighter':
       this.stats.str += 2;
       this.stats.vit += 2;
+      this.setHealth();
       break;
     case 'Rogue':
       this.stats.agi += 2;
       this.stats.vit += 1;
+      this.setHealth();
       break;
     }
   }
