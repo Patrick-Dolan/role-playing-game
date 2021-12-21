@@ -88,7 +88,7 @@ describe("Inventory", () => {
         name: "Magic Armor",
       };
       inventory.equipItem(armor);
-      expect(inventory.armor.name).toMatch("Magic Armor");
+      expect(inventory.armor.item.name).toMatch("Magic Armor");
     });
     
   });
