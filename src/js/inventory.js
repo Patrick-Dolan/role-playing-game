@@ -5,7 +5,6 @@ export class Inventory {
     this.weapon = {};
     this.trinket = {};
   }
-  //TODO Create constuctor object for equip slots
   addItem(item) {
     return (this.tooManyItems()) ? "Inventory Full" : this.items.push(item);
   }
@@ -22,6 +21,8 @@ export class Inventory {
       this.weapon.item = item;
     } else if (item.equippable === "trinket") {
       this.trinket.item = item;
+    } else {
+      return "Item not equippable";
     }
   }
 };
