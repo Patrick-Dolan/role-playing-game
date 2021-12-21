@@ -6,10 +6,13 @@ describe("Character", () => {
     character = new Character("John Smith");
   });
   test("should correctly create a character object", () => {
-    expect(character.name).toBe("John Smith");
+    expect(character.name).toMatch("John Smith");
   });
   test("should correctly assign level 1", () => {
-    expect(character.level).toBe(1);
+    expect(character.level).toEqual(1);
+  });
+  test("should correctly assign 0 exp", () => {
+    expect(character.exp).toEqual(0);
   });
 
   // Tests to generate stats
