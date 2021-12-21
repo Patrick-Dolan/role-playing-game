@@ -1,4 +1,5 @@
 import { Character } from "../src/js/charactercreation";
+import { checkLevel } from "../src/js/levelsystem";
 
 let character;
 let classChoice;
@@ -11,6 +12,6 @@ beforeEach(() => {
 
 describe("returnLevel", () => {
   test("should return the level of the character", () => {
-    expect(character.checkLevel()).toEqual(1);
+    expect(checkLevel(character)).toEqual(1);
   });
 });
