@@ -1,5 +1,5 @@
 import { Character } from "../src/js/charactercreation";
-import { checkLevel, checkExp, levelUp } from "../src/js/levelsystem";
+import { checkLevel, checkExp, levelUp, addExp } from "../src/js/levelsystem";
 
 let character;
 let classChoice;
@@ -18,6 +18,13 @@ describe("checkLevel", () => {
 describe("checkExp", () => {
   test("should return the exp of the character", () => {
     expect(checkExp(character)).toEqual(0);
+  });
+});
+describe("addExp", () => {
+  test("should add exp to the character based on how many fights won", () => {
+    character.fights = 1;
+    addExp(character);
+    expect(character.exp).toEqual(1);
   });
 });
 describe("levelUp", () => {
