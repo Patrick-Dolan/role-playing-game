@@ -33,10 +33,10 @@ describe("addExp", () => {
   });
 });
 describe("levelUp", () => {
-  test("should increase the strength of the character by 1", () => {
+  test("should increase the strength of the character by 2", () => {
     let firstStr = character.stats.str;
     levelUp(character);
     expect(character.level).toEqual(2);
-    expect(character.stats.str).toEqual(firstStr + 1);
+    expect(character.stats.str).toEqual(firstStr + 2);
   });
 });
