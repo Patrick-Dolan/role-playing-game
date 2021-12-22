@@ -1,5 +1,5 @@
 import { Character } from "../src/js/charactercreation";
-import { checkLevel, checkExp } from "../src/js/levelsystem";
+import { checkLevel, checkExp, levelUp } from "../src/js/levelsystem";
 
 let character;
 let classChoice;
@@ -20,7 +20,9 @@ describe("checkExp", () => {
     expect(checkExp(character)).toEqual(0);
   });
 });
-//TODO Create levelUp function
-// describe("levelUp", () => {
-//   test("should increase the le")
-// });
+describe("levelUp", () => {
+  test("should increase the level of the character", () => {
+    levelUp(character);
+    expect(character.level).toEqual(2);
+  });
+});
