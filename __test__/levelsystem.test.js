@@ -1,5 +1,5 @@
 import { Character } from "../src/js/charactercreation";
-import { checkLevel } from "../src/js/levelsystem";
+import { checkLevel, checkExp } from "../src/js/levelsystem";
 
 let character;
 let classChoice;
