@@ -74,28 +74,23 @@ describe("Character", () => {
       character.chooseClass(choice);
       expect(character.stats.agi).toEqual(previousStat + 2);
     });
-
-    // Tests to update character.stats.int based on character class chosen
-    test("should take in Wizard as class and subtract 1 to this.stats.vit", () => {
+    test("should add health to wizard character", () => {
       let choice = "Wizard";
       character.generateStats();
-      let previousStat = character.stats.vit;
       character.chooseClass(choice);
-      expect(character.stats.vit).toEqual(previousStat - 1);
+      expect(character.health).toEqual(5);
     });
-    test("should take in Fighter as class and add 2 to this.stats.vit", () => {
+    test("should add health to Fighter character", () => {
       let choice = "Fighter";
       character.generateStats();
-      let previousStat = character.stats.vit;
       character.chooseClass(choice);
-      expect(character.stats.vit).toEqual(previousStat + 2);
+      expect(character.health).toEqual(8);
     });
-    test("should take in Rogue as class and add 1 to this.stats.vit", () => {
+    test("should add health to Rogue character", () => {
       let choice = "Rogue";
       character.generateStats();
-      let previousStat = character.stats.vit;
       character.chooseClass(choice);
-      expect(character.stats.vit).toEqual(previousStat + 1);
+      expect(character.health).toEqual(7);
     });
   });
 
