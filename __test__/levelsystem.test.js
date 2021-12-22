@@ -34,6 +34,7 @@ describe("addExp", () => {
 });
 describe("levelUp", () => {
   test("should increase the level of the character", () => {
+    character.exp = 10;
     levelUp(character);
     expect(character.level).toEqual(2);
   });
