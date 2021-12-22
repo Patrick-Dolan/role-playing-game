@@ -14,6 +14,9 @@ describe("Character", () => {
   test("should correctly assign 0 exp", () => {
     expect(character.exp).toEqual(0);
   });
+  test("should correctly assign 0 fights", () => {
+    expect(character.fights).toEqual(0);
+  });
 
   // Tests to generate stats
   describe("generateStats", () => {

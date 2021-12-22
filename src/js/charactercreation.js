@@ -3,6 +3,7 @@ export class Character {
     this.name = name;
     this.level = 1;
     this.exp = 0;
+    this.fights = 0;
     this.stats = {
       int: 0,
       str: 0,
