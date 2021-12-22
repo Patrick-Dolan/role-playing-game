@@ -4,3 +4,6 @@ export function checkLevel(character) {
 export function checkExp(character) {
   return character.exp;
 }
+export function levelUp(character) {
+  character.level += 1;
+}
