@@ -2,7 +2,7 @@ export class Character {
   constructor(name) {
     this.name = name;
     this.level = 1;
-    this.exp = 0;
+    this.exp = 1;
     this.fights = 0;
     this.stats = {
       int: 0,

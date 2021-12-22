@@ -12,7 +12,7 @@ describe("Character", () => {
     expect(character.level).toEqual(1);
   });
   test("should correctly assign 0 exp", () => {
-    expect(character.exp).toEqual(0);
+    expect(character.exp).toEqual(1);
   });
   test("should correctly assign 0 fights", () => {
     expect(character.fights).toEqual(0);
