@@ -37,6 +37,6 @@ describe("levelUp", () => {
     let previousStr = character.stats.str;
     levelUp(character);
     expect(character.level).toEqual(2);
-    expect(character.str).toEqual(previousStr + 2);
+    expect(character.str).toEqual(previousStr + 1);
   });
 });
