@@ -17,7 +17,7 @@ describe("checkLevel", () => {
 });
 describe("checkExp", () => {
   test("should return the exp of the character", () => {
-    expect(checkExp(character)).toEqual(0);
+    expect(checkExp(character)).toEqual(1);
   });
 });
 describe("addExp", () => {
@@ -34,9 +34,9 @@ describe("addExp", () => {
 });
 describe("levelUp", () => {
   test("should increase the strength of the character by 1", () => {
-    let previousStr = character.stats.str;
+    let firstStr = character.stats.str;
     levelUp(character);
     expect(character.level).toEqual(2);
-    expect(character.str).toEqual(previousStr + 1);
+    expect(character.stats.str).toEqual(firstStr + 1);
   });
 });
