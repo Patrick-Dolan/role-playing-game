@@ -10,8 +10,17 @@ beforeEach(() => {
   character.chooseClass(classChoice);
 });
 
-describe("returnLevel", () => {
+describe("checkLevel", () => {
   test("should return the level of the character", () => {
     expect(checkLevel(character)).toEqual(1);
   });
 });
+describe("checkExp", () => {
+  test("should return the exp of the character", () => {
+    expect(checkExp(character)).toEqual(0);
+  });
+});
+//TODO Create levelUp function
+// describe("levelUp", () => {
+//   test("should increase the le")
+// });
