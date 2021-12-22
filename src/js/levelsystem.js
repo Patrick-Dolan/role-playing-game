@@ -5,7 +5,7 @@ export function checkExp(character) {
   return character.exp;
 }
 export function addExp(character) {
-  return character.exp = character.fights += 1;
+  return character.exp = character.fights * 5;
 }
 export function levelUp(character) {
   character.level += 1;
