@@ -24,7 +24,7 @@ describe("addExp", () => {
   test("should add exp to the character based on how many fights won", () => {
     character.fights = 1;
     addExp(character);
-    expect(character.exp).toEqual(1);
+    expect(character.exp).toEqual(2);
   });
 });
 describe("levelUp", () => {
