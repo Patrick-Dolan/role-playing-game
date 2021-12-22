@@ -38,11 +38,10 @@ describe("levelUp", () => {
     levelUp(character);
     expect(character.level).toEqual(2);
   });
-  test("should increase character level to 2 when exp reaches 10", () => {
+  test("should increase character level to 2 when exp reaches 15", () => {
     character.fights = 2;
     levelUp(character);
     expect(character.level).toEqual(2);
-    expect(character.exp).toBeGreaterThan(9);
-    expect(character.exp).toBeLessThan(11);
+    expect(character.exp).toEqual(15);
   });
 });
