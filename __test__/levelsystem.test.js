@@ -20,7 +20,7 @@ beforeEach(() => {
   wizardCharacter.chooseClass(wizardChoice);
   //Rogue
   rogueCharacter = new Character("John Smith");
-  rogueChoice = "Roguer";
+  rogueChoice = "Rogue";
   rogueCharacter.generateStats();
   rogueCharacter.chooseClass(rogueChoice);
 });
