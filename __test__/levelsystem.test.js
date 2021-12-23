@@ -1,5 +1,5 @@
 import { Character } from "../src/js/charactercreation";
-import { checkLevel, checkExp, levelUp, addExp } from "../src/js/levelsystem";
+import { checkLevel, checkExp, levelUp, addExp, manageLevels } from "../src/js/levelsystem";
 
 let fighterCharacter;
 let fighterChoice;
@@ -152,5 +152,14 @@ describe("levelUp", () => {
       }  
     expect(rogueCharacter.level).toEqual(5);
     expect(rogueCharacter.stats.agi).toEqual(firstAgi + 2);
+  });
+});
+describe("manageLevels", () => {
+  test("should change fighter from level 1 to level 2 when character reaches 5 exp", () => {
+    let previousLevel = fighterCharacter.level;
+    fighterCharacter.fights = 1;
+    manageLevels(fighterCharacter);
+    expect(previousLevel).toEqual(fighterCharacter.level - 1);
+    expect(fighterCharacter.level).toEqual(2);
   });
 });
