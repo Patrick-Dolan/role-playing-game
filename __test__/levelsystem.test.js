@@ -36,10 +36,38 @@ describe("addExp", () => {
 });
 // LevelUp function
 describe("levelUp", () => {
-  test("should increase the strength of the character by 2", () => {
+  // Fighter specific tests
+  test("should increase the strength of the character by 2 when character is level 2", () => {
     let firstStr = fighterCharacter.stats.str;
     levelUp(fighterCharacter);
     expect(fighterCharacter.level).toEqual(2);
+    expect(fighterCharacter.stats.str).toEqual(firstStr + 2);
+  });
+  test("should increase the strength of the character by 2 when character is level 3", () => {
+    let firstStr = 0;fighterCharacter.stats.str;
+    for (let i = 0; i <= 1; i++){
+      firstStr = fighterCharacter.stats.str;
+      levelUp(fighterCharacter);
+    }  
+    expect(fighterCharacter.level).toEqual(3);
+    expect(fighterCharacter.stats.str).toEqual(firstStr + 2);
+  });
+  test("should increase the strength of the character by 2 when character is level 4", () => {
+    let firstStr = 0;fighterCharacter.stats.str;
+    for (let i = 0; i <= 2; i++){
+      firstStr = fighterCharacter.stats.str;
+      levelUp(fighterCharacter);
+      }  
+    expect(fighterCharacter.level).toEqual(4);
+    expect(fighterCharacter.stats.str).toEqual(firstStr + 2);
+  });
+  test("should increase the strength of the character by 2 when character is level 5", () => {
+    let firstStr = 0;fighterCharacter.stats.str;
+    for (let i = 0; i <= 3; i++){
+      firstStr = fighterCharacter.stats.str;
+      levelUp(fighterCharacter);
+      }  
+    expect(fighterCharacter.level).toEqual(5);
     expect(fighterCharacter.stats.str).toEqual(firstStr + 2);
   });
 });
