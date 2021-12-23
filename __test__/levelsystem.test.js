@@ -8,17 +8,17 @@ let wizardChoice;
 let rogueCharacter;
 let rogueChoice;
 beforeEach(() => {
-  //Fighter
+  // Fighter
   fighterCharacter = new Character("John Smith");
   fighterChoice = "Fighter";
   fighterCharacter.generateStats();
   fighterCharacter.chooseClass(fighterChoice);
-  //Wizard
+  // Wizard
   wizardCharacter = new Character("John Smith");
   wizardChoice = "Wizard";
   wizardCharacter.generateStats();
   wizardCharacter.chooseClass(wizardChoice);
-  //Rogue
+  // Rogue
   rogueCharacter = new Character("John Smith");
   rogueChoice = "Rogue";
   rogueCharacter.generateStats();
