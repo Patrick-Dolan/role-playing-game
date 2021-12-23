@@ -9,18 +9,51 @@ export function addExp(character) {
 }
 export function levelUp(character) {
   character.level += 1;
-  switch(character.level){
-    case 2:
-      character.stats.str += 2;
-      break;
-    case 3:
-      character.stats.str += 2;
-      break;
-    case 4:
-      character.stats.str += 2;
-      break;
-    case 5:
-      character.stats.str += 2;
-      break;
+  switch(character.class) {
+    case "Fighter": 
+      switch(character.level){
+        case 2:
+          character.stats.str += 2;
+          break;
+        case 3:
+          character.stats.str += 2;
+          break;
+        case 4:
+          character.stats.str += 2;
+          break;
+        case 5:
+          character.stats.str += 2;
+          break;
+      }
+    case "Wizard":
+      switch(character.level){
+        case 2:
+          character.stats.int += 2;
+          break;
+        case 3:
+          character.stats.int += 2;
+          break;
+        case 4:
+          character.stats.int += 2;
+          break;
+        case 5:
+          character.stats.int += 2;
+          break;
+      }
+    case "Rogue":
+      switch(character.level){
+        case 2:
+          character.stats.agi += 2;
+          break;
+        case 3:
+          character.stats.agi += 2;
+          break;
+        case 4:
+          character.stats.agi += 2;
+          break;
+        case 5:
+          character.stats.agi += 2;
+          break;
+      }
   }
 }
