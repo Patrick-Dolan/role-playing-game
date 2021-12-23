@@ -162,4 +162,22 @@ describe("manageLevels", () => {
     expect(previousLevel).toEqual(fighterCharacter.level - 1);
     expect(fighterCharacter.level).toEqual(2);
   });
+  test("should change fighter from level 2 to level 3 when character reaches 15 exp", () => {
+    fighterCharacter.level = 2;
+    fighterCharacter.fights = 3;
+    manageLevels(fighterCharacter);
+    expect(fighterCharacter.level).toEqual(3);
+  });
+  test("should change fighter from level 4 to level 5 when character reaches 30 exp", () => {
+    fighterCharacter.level = 3;
+    fighterCharacter.fights = 6;
+    manageLevels(fighterCharacter);
+    expect(fighterCharacter.level).toEqual(4);
+  });
+  test("should change fighter from level 4 to level 5 when character reaches 45 exp", () => {
+    fighterCharacter.level = 4;
+    fighterCharacter.fights = 9;
+    manageLevels(fighterCharacter);
+    expect(fighterCharacter.level).toEqual(5);
+  });
 });
