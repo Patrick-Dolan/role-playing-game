@@ -18,7 +18,7 @@ export class Character {
     this.stats.str = rollD6();
     this.stats.agi = rollD6();
     this.stats.vit = 6;
-  }//TODO Add tests to add setHealth to chooseClass method
+  }
   chooseClass(choice) {
     this.class = choice;
     switch (choice) {
