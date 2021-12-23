@@ -57,3 +57,20 @@ export function levelUp(character) {
       }
   }
 }
+export function manageLevels(character) {
+  addExp(character);
+  switch(character.exp){
+    case 5:
+      levelUp(character);
+      break;
+    case 15:
+      levelUp(character);
+      break;
+    case 30:
+      levelUp(character);
+      break;
+    case 45:
+      levelUp(character);
+      break;
+  }
+}
